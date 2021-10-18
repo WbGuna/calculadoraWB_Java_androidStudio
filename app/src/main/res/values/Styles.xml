@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //Estilo da caixa do botão
+    <style name="Container_Button">
+        <item name = "android:layout_width">0dp</item> // Largura do butão
+        <item name = "android:layout_height">match_parent</item> // Altura do Botão
+        <item name = "android:layout_weight">1</item> // Espaço do botão na tela
+        <item name = "android:textSize">30sp</item> // Tamanho do texto da calculadora
+        <item name = "android:gravity">center</item> // Centralizando os numeros dentro dos botões
+        <item name = "android:textStyle">bold</item> // Deixando os números em negrito
+        <item name = "android:layout_margin">0.5dp</item> // Margen entre os botões
+    </style>
+
+    // Estilo para os botões de operação
+    <style name="Operators_Button" parent="Container_Button">
+        <item name = "android:background">@color/material_500</item> // Cor do botão
+        <item name = "android:textColor">@color/white</item> // Cor da letra dentro do botão
+    </style>
+
+    // Estilo para os botões númericos
+    <style name="Numbers_Button" parent="Container_Button">
+        <item name = "android:background">@drawable/botao_numero_clicado</item> // Cor do botão clicado
+        <item name = "android:textColor">@color/purple_700</item> // Cor da letra dentro do botão
+    </style>
+
+
+
+
+</resources>

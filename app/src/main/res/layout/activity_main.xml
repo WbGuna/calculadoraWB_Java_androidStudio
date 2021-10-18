@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    // Caixa da parte da epressão
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_expressao"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text=""
+        android:textColor="@color/material_500"
+        android:textSize="40sp"
+        android:gravity="end"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="start"
+        android:singleLine="true" />
+
+    // Caixa da parte do resultado
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_resultado"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text=""
+        android:textColor="@color/material_500"
+        android:textSize="30sp"
+        android:gravity="end"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+    // Caixa Nome da Calculadora
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4">
+
+        //Nome calculadora - Botão sem Função
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_nome"
+            style="@style/Operators_Button"
+            android:layout_weight="4"
+            android:text="WB"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+
+    // Primeira Caixa de layout dos botões númericos
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        //Botão número 7
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_sete"
+            style="@style/Numbers_Button"
+            android:text="7" />
+
+        //Botão número 8
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_oito"
+            style="@style/Numbers_Button"
+            android:text="8" />
+
+        //Botão número 9
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_nove"
+            style="@style/Numbers_Button"
+            android:text="9" />
+
+        //Botão Multiplicação
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/multiplicacao"
+            style="@style/Operators_Button"
+            android:text="X" />
+
+    </LinearLayout>
+
+
+    // Segunda Caixa de layout dos botões númericos
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        //Botão número 4
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_quatro"
+            style="@style/Numbers_Button"
+            android:text="4" />
+
+        //Botão número 5
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_cinco"
+            style="@style/Numbers_Button"
+            android:text="5" />
+
+        //Botão número 6
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_seis"
+            style="@style/Numbers_Button"
+            android:text="6" />
+
+        //Botão Multiplicação
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/subtracao"
+            style="@style/Operators_Button"
+            android:text="-" />
+
+    </LinearLayout>
+
+    // Terceira Caixa de layout dos botões númericos
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        //Botão número 1
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_um"
+            style="@style/Numbers_Button"
+            android:text="1" />
+
+        //Botão número 2
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_dois"
+            style="@style/Numbers_Button"
+            android:text="2" />
+
+        //Botão número 3
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_tres"
+            style="@style/Numbers_Button"
+            android:text="3" />
+
+        //Botão Multiplicação
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/soma"
+            style="@style/Operators_Button"
+            android:text="+" />
+
+    </LinearLayout>
+
+    // Quarta Caixa de layout dos botões númericos
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        //Botão ponto .
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ponto"
+            style="@style/Numbers_Button"
+            android:text="." />
+
+        //Botão número 0
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/numero_zero"
+            style="@style/Numbers_Button"
+            android:text="0" />
+
+        //Botão backspace
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backspace"
+            style="@style/Numbers_Button"
+            android:src="@drawable/backspace"
+            android:scaleType="center" />
+
+        //Botão divisão
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/divisao"
+            style="@style/Operators_Button"
+            android:text="/" />
+
+    </LinearLayout>
+
+    // Quinta Caixa de layout dos botões númericos
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+
+        //Botão Limpar
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_limpar"
+            style="@style/Operators_Button"
+            android:layout_weight="3"
+            android:text="C" />
+
+        //Botão igual (Resultado)
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/igual"
+            style="@style/Operators_Button"
+            android:text="=" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
